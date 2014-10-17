@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package chapter1_Arrays_And_Strings;
+package chapter01_Arrays_And_Strings;
 
 /**
  * Given an image represented by an NxN matrix, where each pixel in the image is

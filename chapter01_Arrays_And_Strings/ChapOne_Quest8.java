@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package chapter1_Arrays_And_Strings;
+package chapter01_Arrays_And_Strings;
 
 /**
  * Assume you have a method isSubstring which checks if one word is a substring
