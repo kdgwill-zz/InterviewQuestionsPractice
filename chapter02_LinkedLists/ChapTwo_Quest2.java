@@ -4,8 +4,8 @@
  */
 package chapter02_LinkedLists;
 
-import dataStrcture.LinkedList;
-import dataStrcture.Node;
+import dataStructure.LinkedList;
+import dataStructure.Node;
 
 /**
  * Implement an algorithm to find the kth to last element of a single linked

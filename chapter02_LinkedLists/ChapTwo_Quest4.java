@@ -4,8 +4,8 @@
  */
 package chapter02_LinkedLists;
 
-import dataStrcture.LinkedList;
-import dataStrcture.Node;
+import dataStructure.LinkedList;
+import dataStructure.Node;
 
 /**
  * Write code to partion a linked list around a value x, such that all nodes

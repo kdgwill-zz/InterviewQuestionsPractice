@@ -4,8 +4,8 @@
  */
 package chapter02_LinkedLists;
 
-import dataStrcture.LinkedList;
-import dataStrcture.Node;
+import dataStructure.LinkedList;
+import dataStructure.Node;
 
 /**
  * Given a circular linked list, implement an algorithm which returns the node
@@ -93,7 +93,7 @@ public class ChapTwo_Quest6 {
         list.append('f');
         list.append('g');
         list.append('h').next = n;
-        System.out.println("Was Their a Cycle? " + detectCycle(list.root));
-        System.out.println("What node created the cycle? " + detectCycleNode(list.root));
+        System.out.println("Was Their a Cycle? " + detectCycle(list.getList()));
+        System.out.println("What node created the cycle? " + detectCycleNode(list.getList()));
     }
 }

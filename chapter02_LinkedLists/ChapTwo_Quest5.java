@@ -4,8 +4,8 @@
  */
 package chapter02_LinkedLists;
 
-import dataStrcture.LinkedList;
-import dataStrcture.Node;
+import dataStructure.LinkedList;
+import dataStructure.Node;
 
 /**
  * You have two numbers represented by a linked list, where each node contains a
@@ -103,7 +103,7 @@ public class ChapTwo_Quest5 {
         list2.append(5);
         list2.append(9);
         list2.append(2);
-        Node sum = getSumBackward(list1.root, list2.root);
+        Node sum = getSumBackward(list1.getList(), list2.getList());
         LinkedList<Integer> listSum = new LinkedList<>(sum);
         System.out.println("(7->1->6) + (5->9->2)");
         listSum.println();
@@ -116,7 +116,7 @@ public class ChapTwo_Quest5 {
         list2.append(2);
         list2.append(9);
         list2.append(5);
-        sum = getSumForward(list1.root, list2.root);
+        sum = getSumForward(list1.getList(), list2.getList());
         listSum.setRoot(sum);
         System.out.println("(6->1->7) + (2->9->5)");
         listSum.println();

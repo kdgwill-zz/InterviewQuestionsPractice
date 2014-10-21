@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package dataStrcture;
+package dataStructure;
 
 import java.util.Iterator;
 
@@ -12,7 +12,7 @@ import java.util.Iterator;
  */
 public class LinkedList<N> implements Iterable<N> {
 
-    public Node<N> root = null;
+    protected Node<N> root = null;
 
     public LinkedList() {
         this(null);
@@ -58,30 +58,26 @@ public class LinkedList<N> implements Iterable<N> {
         root = null;
     }
 
-    public void println() {
-        String s = "Data:%3";
-        N type = root.data;
-        if (type instanceof Integer) {
-            s += "d";
-        } else if (type instanceof Long) {
-            s += "ld";
-        } else if (type instanceof Float) {
-            s += "f";
-        } else if (type instanceof Double) {
-            s += "lf";
-        } else if (type instanceof Byte) {
-            s += "x";
-        } else if (type instanceof Character) {
-            s += "c";
-        } else if (type instanceof String) {
-            s += "s";
-        } else {
-            s += "p";
-        }
-        s += '\n';
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("\n----LINKED-LIST----\nSize:\t");
+        sb.append(size());
+        sb.append("\n-------------------\n");
         for (N i : this) {
-            System.out.printf(s, i);
+            sb.append("Data:\t");
+            sb.append(i);
+            sb.append("\n");
         }
+        sb.append("\n-------------------\n");
+        return sb.toString();
+    }
+
+    public void println() {
+        if (root == null) {
+            System.out.println("List is Empty!");
+        }
+        System.out.println(toString());
     }
 
     @Override
@@ -127,17 +123,14 @@ public class LinkedList<N> implements Iterable<N> {
             list.append(i);
         }
         System.out.println("Original List");
-        System.out.printf("Size:%3d\n", list.size());
         list.println();
         for (Iterator<Integer> listIter = list.iterator(); listIter.hasNext();) {
             Integer i = listIter.next();
             if (i % 2 != 0) {//remove odd
-                System.out.println(i);
                 listIter.remove();
             }
         }
         System.out.println("Even Only");
-        System.out.printf("Size:%3d\n", list.size());
         list.println();
     }
 }

@@ -4,8 +4,8 @@
  */
 package chapter02_LinkedLists;
 
-import dataStrcture.LinkedList;
-import dataStrcture.Node;
+import dataStructure.LinkedList;
+import dataStructure.Node;
 
 /**
  * Implement a function to check if a linked list is a palindrome.
