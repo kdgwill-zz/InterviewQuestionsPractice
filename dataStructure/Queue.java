@@ -40,14 +40,14 @@ public class Queue<N> {
         return head != null ? (N) head.data : null;
     }
 
-    public Node pop() {
+    public N pop() {
         if (head == null) {
             return null;
         }
         size--;
         Node n = head;
         head = head.next;
-        return n;
+        return (N) n.data;
     }
 
     public Node add(N data) {

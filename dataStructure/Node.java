@@ -24,6 +24,7 @@ public class Node<N> {
 
     @Override
     public String toString() {
-        return "Node{" + "data=" + data + ", next=" + next.data + '}';
+        N dta = next != null ? (N) next.data : null;
+        return "Node{" + "data=" + data + ", next=" + dta + '}';
     }
 }
