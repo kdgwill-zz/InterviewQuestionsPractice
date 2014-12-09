@@ -50,10 +50,9 @@ int main() {
         perror("incorrect\n");
         exit(EXIT_FAILURE);
     }
+    BinaryInteger * btiY = intToBinary(Y);
+    BinaryInteger * bti44C = intToBinary(0x44C);
     printf("Digit: %d == %d\n",Y,0x44C);
-    printf("Binary:\n%d\t",Y);
-    intToBinary(Y);
-    printf("%d\t",0X44C);
-    intToBinary(0x44C);
+    printf("Binary:%s == %s\n",btiY->binary,bti44C->binary);
     return 0;
 }

@@ -1,4 +1,4 @@
-/**
+/** 
  * Given a real number between 0 and 1 (e.g. 0.72) that is passed in as a double
  * print the binary represention. If the number cannot be represented accurately
  * in binary with at most 32 characters, print "ERROR"
@@ -51,5 +51,6 @@ int main() {
     fracToBits(0.50f);
     fracToBits(0.25f);
     fracToBits(0.02f);
+
     return 0;
 }

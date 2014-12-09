@@ -4,8 +4,6 @@
  */
 package dataStructure;
 
-import chap05_Bit_Manipulation.chap05_Quest2;
-
 /**
  *
  * @author Kyle D. Williams <kyledgwilliams@gmail.com>
@@ -45,32 +43,6 @@ public class Utility {
         int row = i / width;
         int col = i % width;
         return new Pair(row, col);
-    }
-
-    public static String intToBitsLSD(int num) {
-        StringBuilder str = new StringBuilder();
-        while (num != 0) {
-            str.append(num & 1);
-            num >>= 1;
-        }
-        return str.reverse().toString();
-    }
-
-    public static String intToBitsMSD(int num) {
-        StringBuilder str = new StringBuilder();
-        for (int i = 31; i >= 0; i--) {
-            byte j = (byte) ((num & (1 << i)) != 0 ? 1 : 0);
-            str.append(j);
-        }
-        return str.toString();
-    }
-
-    public static String doubleToBits(double num) {
-        int n = (int) num;
-        String s = intToBitsLSD(n);
-        num -= n;
-        String s2 = chap05_Quest2.fracToBits(num);
-        return s + s2.substring(1);
     }
 
     public static class Pair<A, B> {
