@@ -1,0 +1,92 @@
+1) Here is a structure to represent a
+singly-linked list:
+typedef struct Foo {
+  struct Foo *next;
+  char name[32];
+  double value;
+} Foo;
+given a pointer to the head of the list, write
+down an expression for a pointer to the value field of the third item
+in the list.
+Foo *head;
+double *thirdVal  ? 
+Answer: double *thirdVal = head->next!=NULL?head->next->value: 0.0;//must use 0.0 as -1 can be valid 
+-------------------------------------------------------------------------------
+2) I am provided with approximately 1 million
+records that has been placed in an array sorted by a (unique)
+transaction id. Approximately how many operations do I expect to do
+on average to find a specific record efficiently?
+Answer:
+If the transaction id is directly mapped to
+the index then it would take roughly O(1) time to locate the record.
+If this is not the case but the array is sorted then a user can use
+BinarySearch which will take roughly O(log(n))
+-------------------------------------------------------------------------------
+3) Simplify this boolean expression:
+  not(A or B or C) or (A and B) or not(B)
+Answer:
+	Original:!(A || B || C) || (A && B) || !B  = R
+			X       ||     Z    ||  Y  = R
+	Condensed: not A and B and not C
+		 : not(A or C) and B   
+ A B C X Y Z R
+ 0 0 0 1 0 1 1
+ 0 0 1 0 0 1 1
+ 0 1 0 0 0 0 0 << Only row that needs to be false !A && B && !C or !(A||C) && B
+ 0 1 1 0 0 0 1
+ 1 0 0 0 0 1 1
+ 1 0 1 0 0 1 1
+ 1 1 0 0 1 0 1
+ 1 1 1 0 1 0 1
+
+4) You are given a utility function from someone else's code that combines a trade name and a numerical index into a composite name as follows:
+   char *tradeIndexed(char *tradeName, int id)   {
+      static char buf[32];
+      sprintf(buf, "%s-%d", tradeName, id);
+      return buf;
+   }
+In no more than one line each, list 1 or 2
+things you need to watch out for when using this function.
+Answer:
+	1) Should prefer to use snprintf to prevent malicious use as well as prevent 
+possible buffer overflow sprintf(buf, sizeof(buf),"%s-%d", tradeName, id);
+	2) Using stack based static buffers are dangerous if the function is called 
+more than once, it will change the value of the previously pointed to value unless 
+that value was copied into its own buffer outside of the call. 
+-------------------------------------------------------------------------------
+5) What kind of data structure, algorithm,
+device or approach would you naturally reach for to (looking for
+separate 1-2 word responses for each one):
+sort a list of objects in a way that
+	preserves the original order of 2 elements, if they are equal under
+	the sort comparator.
+in-order traverse the leaves of a balanced
+	binary tree
+extract all the dates mentioned (expressed
+	in, say, dd/mm/yy format) in a large text document
+parse a numerical expression like (2 + 3) /
+	4 * (7 * 8)
+very quickly determine membership in a set,
+	based on a string key
+fuzzy-match a string, e.g. suggest a list
+	of likely words someone meant from a user's misspelled word
+Answer:
+	1) QuickSort, 3-Way-QuickSort 
+	2) DepthFirst Search
+	3) Regular Expression, Substring Search
+	4) Postfix Tokenization,   
+	5) HashMap
+	6) Trie, Regular Expression
+-------------------------------------------------------------------------------
+6) You have a solid cube of unit length. What is the shortest length of string that can connect one corner to the opposite one (i.e. from the (0,0,0) to the (1,1,1) corner) along the outside of the cube?
+Answer:
+	Assuming you want to find the main diagonal
+of a cube knowing it is unit length means its height width and depth
+are all 1. If this is true then the diagonal of single face of this
+cube would have the angles 45-45-90 which results to 1-1-rad2 meaning
+the diagonal is rad 2, which is all irrelevant.
+If we are looking for a main diagonal and the cube is unit length then the 
+answer is square root of 3 as a general geometric rule rule
+This can also be derived using the distance
+formula 
+Distance=rad((x1-x2)^2+(y1-y2)(z1-z2)) = rad(3) 

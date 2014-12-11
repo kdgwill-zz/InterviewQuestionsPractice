@@ -1,0 +1,28 @@
+Question:	
+	A bunch of people are living on an island, when a visitor comes with a strange
+order: all blue-eyed people must leave the island as soon as possible. There will 
+be a flight out at 8:00pm every evening. Each person can see everyone else's
+eye color, but they do not know their own (nor is anyone allowed to tell them).
+Additionally, they do not know how many people have blue eyes, although they 
+do know that at least one person does. How many days will it take the blue-eyed 
+people to leave?
+
+Answer:
+	This can go one in three ways either all blue-eyed people will leave
+in one day, the islanders will leave in N(the number of islanders) days or 
+none will leave at all. 
+
+The first scenario it is possible that the islanders 
+will look around and either see a single blue-eyed person or non at all. Without 
+a probable number they are left to assume that they themselves are blue-eyed and
+eventually board the train this works if their are 30 blue eyed islanders or none. 
+
+The second scenario is similar to the first however they are given the
+knowledge that their is at least one blue eyed person on the island on the
+first day their is still no probable way to determine if they are blue-eyed so
+their is a possibility that at least one islander will leave everyday, coming
+to the conclusion that they are themselves blue-eyed.
+
+The third scenario is the exact opposite in which no islander leaves as none have 
+probably reason to believe they are blue-eyed themselves and as such they stay on 
+the island.

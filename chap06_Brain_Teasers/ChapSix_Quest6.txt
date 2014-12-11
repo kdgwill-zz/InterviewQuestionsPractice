@@ -1,0 +1,43 @@
+Question: 	
+	There are 100 closed lockers in a hallway. A man begins by opening all 100
+lockers. Next, he closes every second locker. Then, on his third pass, he toggles
+every third locker (closes it if its open or opens it if its closed). This process
+continues for 100 passes, such that on each pass i, the man toggles every ith
+locker. After his 100th pass in the hallway, in which he toggles only locker #100
+how many lockers are open.
+
+
+Answer: 
+	We can first scale the answer to a smaller amount in order to grasp an
+understanding. We will demonstrate using 10 Lockers. 
+e.g. 0=open, 1=closed
+0:0000000000 10:0
+1:0101010101
+2:0111000111
+3:0110000011
+4:0110100010
+5:0110110010
+6:0110111010
+7:0110111110
+8:0110111100
+9:0110111101
+From the example above it can be seen that 3 lockers are left open while 7 are
+closed. Looking at the second row [row 1] we can see that at least half of
+the lockers are open and the other half are closed. As the row increases the
+amount of toggles per row also decreases, it can be deduced that this becomes
+a factoring problem. this can easily be seen by looking at the former half of
+the example above they have a smaller chance of being toggled and none after
+half way. As such we can deduce that the only lockers that will be closed are
+the evenly factored lockers this makes sense as locker 5 has exactly 2 factors
+{1,5}, if the lockers are initially closed and opened on the first pass it
+would be closed on the second pass. This however differs on locker 1,4 and 9,
+which intrestingly enough has an odd amount of factors ie 1={1}, 4={1,2,4} and
+9={1,3,9}. We can deduce that the odd factored lockers will remain open which
+are considered perfect squares. This can be easy enough to find multiplying a
+number by itself will produce a perfect square in the example above with 10
+lockers 10 itself is not a perfect square but 9 is taking the square root of
+that we find the number 3 which is the amount of lockers opened.
+
+This also works in the larger example as 100 is a perfect square itself taking
+its root shows that their are 10 odd factored numbers from 1-100 meaning 10
+lockers will remain open.

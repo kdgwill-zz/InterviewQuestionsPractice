@@ -1,0 +1,18 @@
+Question: 	There is a building of 100 floors. If an egg drops from the Nth floor or above, it
+			will break. If it's dropped from any floor below, it will not break. Your given two
+			eggs. Find N, while minimizing the number of drops for the worse case.
+Answer:
+	Knowing that the building has 100 floors and we only have 2 eggs will
+break at the same number floor attributing to worst case scenario we can start
+at floor 50 and drop the egg. If the egg breaks then we know the floor we are
+looking for is between 51 and 100. Knowing this we can skip every other floor
+heading to floor 52...54...56 and so on. If the egg breaks then we know the
+answer was the floor before. This means in worst case scenario 
+1+(51-1)/2+1 or 1+(50-2)/2+1 which is roughly 26 steps for this solution
+
+	Another way we can look at this is by dropping the first egg once
+every ten floors, if it breaks on a particular floor then we know that it is
+one of then ten floors before that from their we can drop the second egg every
+other floor until it break. This means in worst case scenario 
+10+(9-1)/2+1 or 10+(8-2)/2+1 which is roughly 14 steps for this solutions
+

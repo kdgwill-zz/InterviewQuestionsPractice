@@ -1,0 +1,26 @@
+Question:
+	You have 20 bottles of pills. 19 bottles have 1.0 gram pills, but one has pills
+	of weight 1.1 grams. Given a scale that provides an exact measurement, how
+	would you find the heavy bottle? You can only use the scale once.
+
+Answer:
+	Knowing that each regular pill in a bottle should weight exactly 1
+gram and, assuming their are at least 20 pills per bottle, we can create
+create some formula for deducing the bottle contributing the weight difference
+in a single weighing. This unique formula will be a summation that can be
+subtracted from the weighing and should indicate which bottle is different.
+A simple formula would be a summation of multiples of pills to keep it simple
+we can take 1 pill from bottle 1, 2 pills from bottle 2, 3 pills from bottle 3
+and so on an so forth. This would result in 1+2+...(n-2)+(n-1)+n or easily
+condensed as n*(n+1)/2 which is a deduction from the average two formulas
+(1+2+...)/count = (N+1)/2 and count = (N-1)+1. 
+This results in (20+1)/2=210
+We also know each pill should weigh 1 gram and one set of pills will weight
+1.1 grams. Multiplying the sum of the pills by the expected weight will yield
+the expected weighing result, so 1.0 gram * 210 pills is 210 grams expected.
+We can subtract this weight from the scaled weight and divide it by the
+positive valued difference between the heavier bottle and regular bottles
+ie (scale-210)/(1.1-1.0) or simple (scale-210)/0.1
+eg Assuming the scaled weight is 210.9
+	(210.9-210)/0.1 = 9;
+	Bottle number 9 contains pills weighing 1.1 pounds
