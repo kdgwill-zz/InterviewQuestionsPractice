@@ -11,7 +11,8 @@ package etc.CodingTest_3;
  *
  * such that the hash(the_string) is
  *
- * 25180466553932
+ * 25180466553932  [Trello]
+ * 945924806726376 [FogCreek]
  *
  * if hash is defined by the following pseudo-code:
  *
@@ -27,12 +28,18 @@ package etc.CodingTest_3;
  * For example, if we were trying to find the 7 letter string where
  * hash(the_string) was 680131659347, the answer would be "leepadg".)
  *
- * To apply, please email jobs@trello.com with your solution as the first word
+ * jobs@trello.com with your solution as the first word
  * in the subject line. Include any code you used to solve the problem as an
  * attachment, and also send us a current resume in HTML, Plain Text, or PDF
  * format. In the body of the email please explain why you would be a good fit
  * for this job. Include links to any apps you have worked on. If you have a
  * website or GitHub account send those over as well.
+ *
+ * To apply, please email jobs@fogcreek.com with your solution as the first word
+ * in the subject line. Include any code you used to solve the problem as an
+ * attachment, and also send us a current resume in HTML, Plain Text, or PDF
+ * format. In the body of the email please explain why you would be a good fit for
+ * this job. If you have a website, send us the URL!
  * </pre>
  *
  * @author Kyle D. Williams
@@ -53,6 +60,9 @@ public class TestClass {
         System.err.println("IMPLEMENTATION CORRECT\t" + s1.equals(s2));
         String s3 = unhash(25180466553932L);
         System.out.println(s3);
+        String s4 = unhash(945924806726376L);
+        System.out.println(s4);
+
     }
 
     public static String unhash(long hash) {

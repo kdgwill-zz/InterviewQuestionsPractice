@@ -39,7 +39,7 @@ public class ChapTwo_Quest6 {
      */
     public static Node detectCycleNode(final Node<Character> start) {
         Node n1 = start;
-        Node n2 = start.next;
+        Node n2 = start.next;//offset by 1 to prevent early termination
         while (n2 != null && n2.next != null) {
             if (n1 == n2) {
                 break;
